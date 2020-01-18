@@ -1,0 +1,23 @@
+<div class="panel panel-primary">
+    <div class="panel-heading text-center">
+        <h3 class="panel-title">User Component</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-2">
+                Search user
+            </div>
+            <div class="col-md-4">
+                <input type="text" [(ngModel)]="userName" (change)="getRecord()" />
+            </div>
+        </div>
+
+        <div *ngIf="searchRecord.name" class="container">
+            <h4 class="list-group-item-heading text-center">User Information</h4>
+            <p class="list-group-item-text">User Name : {{searchRecord.name}}</p>
+            <p class="list-group-item-text">Email : {{searchRecord.email}}</p>
+            <p class="list-group-item-text">Phone Number : {{searchRecord.phoneNumber}}</p>
+        </div>
+
+    </div>
+</div>

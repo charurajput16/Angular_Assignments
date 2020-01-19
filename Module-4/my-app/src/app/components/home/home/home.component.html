@@ -1,0 +1,23 @@
+<div class="panel panel-primary">
+    <!-- Default panel contents -->
+    <div class="panel-heading">Details</div>
+    <!-- Table -->
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Author</th>
+                <th>Price</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let info of data">
+                <td>{{info.name}}</td>
+                <td>{{info.author}}</td>
+                <td>{{info.price}}</td>
+                <td>{{info.date | date : 'dd/MM/yy'}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

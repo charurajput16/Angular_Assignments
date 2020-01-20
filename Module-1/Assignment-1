@@ -1,0 +1,59 @@
+/*******************************************************
+1. What is a Component? 
+*******************************************************/
+Components are a logical piece of code for Angular JS application. A Component consists of the following −
+Template − This is used to render the view for the application. This contains the HTML that needs to be rendered in the application. This part also includes the binding and directives.
+Class − This is like a class defined in any language such as C. This contains properties and methods. This has the code which is used to support the view. It is defined in TypeScript.
+Metadata − This has the extra data defined for the Angular class. It is defined with a decorator.
+
+/****************************************************************
+2.Where and how are the Controllers and Models defined?
+*****************************************************************/
+Angular controllers control the data of Angular applications. 
+The ng-controller directive defines the application controller.
+
+/****************************************************************
+3.What is a View and how is it defined? 
+*****************************************************************/
+View is a layer which is responsible for the presentation of data and user interaction. 
+View is defined in the separte html file or defining html code in ts file using decorator @Component.
+
+/****************************************************************
+4.What is used to Bootstrap the application? 
+*****************************************************************/
+An NgModule describes how the application parts fit together. 
+Every application has at least one Angular module, the root module that you bootstrap to launch the application. 
+By convention, it is usually called AppModule.
+
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
+import { AppComponent } from './app.component';
+
+/* the AppModule class with the @NgModule decorator */
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpClientModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+/****************************************************************
+5.What is the use of System Import? 
+*****************************************************************/
+System.import to bootstrap and run your application.
+System.import() is a polyfill for dynamic import proposal, app is a module name, 
+SystemJS uses map and packages in its config file to determine actual URL for loading app module.
+
+6.What are the Dependency Libraries/Bundles needed for an AngularJS Application? 
+There are many Dependency and Libraries needed such as node, angular cli, typescript.
+

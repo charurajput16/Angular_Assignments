@@ -1,0 +1,17 @@
+<div>
+  <p> Date : {{fixedDate | date : 'dd-MM-yyyy'}}</p>
+</div>
+
+<input type="date" name="" id="input" class="form-control" value="" required="required" title="" [(ngModel)]="inputDate"
+  (change)="show('MMMM DD YYYY')">
+
+
+<div>
+  <p> Date is : {{inputDate | dateFormat: 'MMMM DD YYYY'}}</p>
+</div>
+
+<div *ngIf=info.passedYears>
+  <p> {{info.passedYears}} years ago</p>
+  <p> {{info.passedDays}} days ago</p>
+  <p> {{info.passedHours}} hours ago</p>
+</div>

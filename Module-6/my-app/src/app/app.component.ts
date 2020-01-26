@@ -6,7 +6,8 @@ import { Component, LOCALE_ID, Inject } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'i18nDemo';
+
+  currentDate = new Date()
 
   languageList = [
     { code: 'en', label: 'English' },

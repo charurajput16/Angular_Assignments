@@ -1,0 +1,13 @@
+<h1 i18n="@@h1">
+  Assignment for Module-6
+</h1>
+
+<h3 i18n="@@myName">
+  Hello, My name is Charu
+</h3>
+<p>This text will remain same in all languages</p>
+<hr />
+
+<ng-container *ngFor="let language of languageList">
+  <a href="/{{language.code}}/"><button class="button">{{language.label}}</button></a>
+</ng-container>

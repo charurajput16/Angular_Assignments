@@ -1,0 +1,19 @@
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "description": "Contact List - Mean Application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Charu Rajput",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/cli": "^7.3.8",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "mongoose": "^5.9.5",
+    "nodemon": "^1.18.11"
+  }
+}
